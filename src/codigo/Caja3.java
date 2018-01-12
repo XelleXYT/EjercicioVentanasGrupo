@@ -5,6 +5,10 @@
  */
 package codigo;
 
+import java.awt.Desktop;
+import java.net.URI;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Alejandro Luna Gómez
@@ -39,7 +43,7 @@ public class Caja3 extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/codigo/logoXelleXes.png"))); // NOI18N
 
-        jButton1.setText("Abrir Chrome");
+        jButton1.setText("XelleX.es");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jButton1MousePressed(evt);
@@ -80,12 +84,11 @@ public class Caja3 extends javax.swing.JFrame {
 
     private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
 	// TODO add your handling code here:
-	try {
-	    Runtime r = Runtime.getRuntime();
-	    r.exec("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
-	} catch (Exception e) {
-	    e.printStackTrace();
-	}
+	try{  
+          Desktop.getDesktop() .browse(new URI("http://xellex.es")); 
+      } catch (Exception ex){ 
+                  JOptionPane.showMessageDialog(null, "ERROR, no se puede ejecutar la accion.");
+                  }
     }//GEN-LAST:event_jButton1MousePressed
 
     /**
