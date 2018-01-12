@@ -7,15 +7,16 @@ package codigo;
 
 /**
  *
- * @author Usuario
+ * @author Daniel Ortiz Vallejo
  */
 public class Caja4 extends javax.swing.JFrame {
-
+    boolean visible = false;
     /**
      * Creates new form Caja4
      */
     public Caja4() {
 	initComponents();
+	foto.setVisible(false);
     }
 
     /**
@@ -27,21 +28,74 @@ public class Caja4 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        nombre = new javax.swing.JLabel();
+        foto = new javax.swing.JLabel();
+        boton = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        nombre.setBackground(new java.awt.Color(51, 51, 51));
+        nombre.setFont(new java.awt.Font("Consolas", 1, 24)); // NOI18N
+        nombre.setForeground(new java.awt.Color(51, 0, 204));
+        nombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nombre.setText("Daniel Ortiz Vallejo");
+
+        foto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/codigo/Nagash.jpg"))); // NOI18N
+
+        boton.setBackground(new java.awt.Color(51, 51, 51));
+        boton.setFont(new java.awt.Font("Consolas", 1, 36)); // NOI18N
+        boton.setForeground(new java.awt.Color(51, 255, 51));
+        boton.setText("NO PULSAR");
+        boton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                botonMousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(425, 425, 425)
+                        .addComponent(boton, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(272, 272, 272)
+                .addComponent(foto)
+                .addContainerGap(296, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(boton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(foto)
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonMousePressed
+        if(visible==true){
+	    foto.setVisible(false);
+	    visible=false;
+	}
+	else{
+	    foto.setVisible(true);
+	    visible = true;
+	}
+    }//GEN-LAST:event_botonMousePressed
 
     /**
      * @param args the command line arguments
@@ -79,5 +133,8 @@ public class Caja4 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton boton;
+    private javax.swing.JLabel foto;
+    private javax.swing.JLabel nombre;
     // End of variables declaration//GEN-END:variables
 }
