@@ -4,6 +4,11 @@
  * and open the template in the editor.
  */
 package codigo;
+
+import java.awt.Desktop;
+import java.net.URI;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author xp
@@ -88,7 +93,11 @@ public class Caja5 extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonActionPerformed
 
     private void BotonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonMousePressed
-   
+   try{  
+          Desktop.getDesktop() .browse(new URI("https://www.youtube.com/watch?v=lIMokbMWz9o")); 
+      } catch (Exception ex){ 
+                  JOptionPane.showMessageDialog(null, "ERROR, no se puede ejecutar la accion");
+                  }
     }//GEN-LAST:event_BotonMousePressed
 
     /**
