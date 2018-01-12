@@ -4,13 +4,12 @@
  * and open the template in the editor.
  */
 package codigo;
-
 /**
  *
  * @author xp
  */
 public class Caja5 extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Caja5
      */
@@ -27,21 +26,70 @@ public class Caja5 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Nombre = new javax.swing.JLabel();
+        Foto = new javax.swing.JLabel();
+        Boton = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        Nombre.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        Nombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Nombre.setText("Gonzalo Sáez Martí");
+
+        Foto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/codigo/oGEOJ2JU_400x400.jpg"))); // NOI18N
+
+        Boton.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        Boton.setText("HALA MADRID Y NADA MÁS!!!!!");
+        Boton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                BotonMousePressed(evt);
+            }
+        });
+        Boton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 52, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(Boton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Foto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(66, 66, 66))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Foto)
+                .addGap(18, 18, 18)
+                .addComponent(Boton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotonActionPerformed
+
+    private void BotonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonMousePressed
+   
+    }//GEN-LAST:event_BotonMousePressed
 
     /**
      * @param args the command line arguments
@@ -69,6 +117,7 @@ public class Caja5 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Caja5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -79,5 +128,8 @@ public class Caja5 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Boton;
+    private javax.swing.JLabel Foto;
+    private javax.swing.JLabel Nombre;
     // End of variables declaration//GEN-END:variables
 }
