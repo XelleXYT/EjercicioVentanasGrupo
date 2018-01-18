@@ -34,6 +34,7 @@ public class Caja5 extends javax.swing.JFrame {
         Nombre = new javax.swing.JLabel();
         Foto = new javax.swing.JLabel();
         Boton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,7 +44,7 @@ public class Caja5 extends javax.swing.JFrame {
 
         Foto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/codigo/oGEOJ2JU_400x400.jpg"))); // NOI18N
 
-        Boton.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        Boton.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         Boton.setText("HALA MADRID Y NADA MÁS!!!!!");
         Boton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -55,6 +56,8 @@ public class Caja5 extends javax.swing.JFrame {
                 BotonActionPerformed(evt);
             }
         });
+
+        jButton1.setText("Hola");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -68,9 +71,12 @@ public class Caja5 extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 52, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(Boton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Foto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Foto, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Boton, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(66, 66, 66))))
         );
         layout.setVerticalGroup(
@@ -81,7 +87,9 @@ public class Caja5 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Foto)
                 .addGap(18, 18, 18)
-                .addComponent(Boton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Boton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -140,5 +148,6 @@ public class Caja5 extends javax.swing.JFrame {
     private javax.swing.JButton Boton;
     private javax.swing.JLabel Foto;
     private javax.swing.JLabel Nombre;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
